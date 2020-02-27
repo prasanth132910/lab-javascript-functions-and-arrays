@@ -1,17 +1,56 @@
 // Progression #1: Greatest of the two numbers
+function greatestOfTwoNumbers(number1, number2)
+{
+  var num = Math.max(number1, number2);
+  return num;
+}
 
 // Progression #2: The lengthy word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+function findScaryWord(words) 
+{
+  var max = words[0].length;
+  words.map(v => max = Math.max(max, v.length));
+  result = words.filter(v => v.length == max);
+  console.log(result);
+  return result;
+}
+
+
 
 // Progression #3: Net Price
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+
+function netPrice(numbers)
+{
+  var result = numbers.reduce((e , n)=> e+n ,0 )
+  return result;
+  
+}
 
 // Progression #4: Calculate the average
 // Progression 4.1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
+function midPointOfLevels(numbersAvg)
+{
+  var result = numbersAvg.reduce((e, n) => e + n, 0)/numbersAvg.length;
+     return result;
+}
+
+
 // Progression 4.2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
+
+function averageWordLength(wordsArr){
+  var arrayLength = wordsArr.length;
+  var  joined = wordsArr.join('');
+  var   result = joined.length / arrayLength;
+  console.log(joined.length);
+  console.log(wordsArr.length);
+  return result;
+
+}
 
 // Progression #5: Unique arrays
 const wordsUnique = [
@@ -29,8 +68,22 @@ const wordsUnique = [
   'flour'
 ];
 
+function uniqueArray(wordsUnique)
+{
+  var unique = wordsUnique.filter((v, i, a) => a.indexOf(v) === i); 
+  return unique;
+}
+
 // Progression #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+
+function searchElement(wordsFind, find){
+
+  var findvalue = wordsFind.filter( e => e==find)
+  console.log(findvalue);
+
+}
+
 
 // Progression #7: Count repetition
 const wordsCount = [
@@ -46,6 +99,16 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+function howManyTimesElementRepeated(wordsCount)
+ {
+  var count = {};
+  wordsCount.forEach(function (i)
+   {
+      count[i] = (count[i] || 0) + 1; 
+    });
+  console.log(count);
+}
+ 
 
 // Progression #8: Bonus
 
