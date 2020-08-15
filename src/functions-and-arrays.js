@@ -109,6 +109,26 @@ function howManyTimesElementRepeated(wordsCount)
   console.log(count);
 }
  
+function avg(arr) {
+  if (arr.length == 0) return null;
+  console.log(arr);
+  let count = 0;
+  let total_sum = 0;
+  arr.forEach(i => {
+    if (typeof (i) === "boolean")
+      return;
+    else {
+      i = parseInt(i);
+
+      if (Number.isNaN(i)) {
+        count++;
+      } else {
+        total_sum += i;
+      }
+    }
+  });
+  return ((total_sum + count) / arr.length);
+}
 
 // Progression #8: Bonus
 
